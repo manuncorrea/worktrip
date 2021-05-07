@@ -1,7 +1,8 @@
-import { Flex, Heading } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import Head from "next/head";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
+import IconsServices from '../components/IconsServices';
 
 
 interface HomeProps {
@@ -28,6 +29,8 @@ export default function Home({ continents }: HomeProps) {
 
       <Header />
       <Banner />
+      <IconsServices />
+      
     </Flex>
   )
 }
