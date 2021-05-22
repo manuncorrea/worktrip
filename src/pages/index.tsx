@@ -1,9 +1,11 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Heading } from "@chakra-ui/react";
+
 import Head from "next/head";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
 import IconsServices from '../components/IconsServices';
 import Separador from "../components/Separador";
+import Slider from "../components/Slider";
 
 
 interface HomeProps {
@@ -32,7 +34,18 @@ export default function Home({ continents }: HomeProps) {
       <Banner />
       <IconsServices />
       <Separador />
-      
+
+      <Heading
+        textAlign="center"
+        fontWeight="500"
+        marginBottom={["5", "14"]}
+        fontSize={["lg", "3xl", "4xl"]}
+      >
+        Vamos nessa?<br/>
+        Então escolha seu continente
+      </Heading>
+
+      <Slider continents={continents}/>  
     </Flex>
   )
 }

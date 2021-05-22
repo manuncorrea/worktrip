@@ -4,9 +4,11 @@ import { useRouter } from "next/dist/client/router";
 import { RiArrowLeftSLine } from 'react-icons/ri';
 
 export default function Header () {
+  
+  //voltar para home
+  const { asPath } = useRouter();
+  const notHomePage = asPath !== '/';
 
-  const { asPath } = useRouter()
-  const notHomePage = asPath !== '/'
   return(
     <Flex
       background="white"
@@ -34,6 +36,7 @@ export default function Header () {
             </a>
           </Link>
         )}
+
         <Image
         width={["81px", "184px" ]}
         src="/logo.svg"
